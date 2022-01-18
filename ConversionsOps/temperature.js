@@ -3,4 +3,3 @@ const temperature = (a)=>{
 }
 
 module.exports = temperature
-
