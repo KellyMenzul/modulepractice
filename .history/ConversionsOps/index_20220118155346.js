@@ -1,5 +1,5 @@
 const temperature = require('./temperature')
-const gram = require('./gram')
+const grams = require('./grams')
 
 module.exports = {
     temperature,
