@@ -8,6 +8,12 @@ switch(url.parse(req.url).pathname){
         const queriesTemp = url.parse(req.url, true).query
         res.end(JSON.stringify(temperature(queriesTemp.temp, queriesTemp.unit)))
         break
+
+    case '/money':
+        const queriesMoney = url.parse(req.url, true).query
+        res.end(JSON.stringify(convert(queriesMoney.dollars, queriesMoney.unit)))
+        break
+    
 }
 
 })
