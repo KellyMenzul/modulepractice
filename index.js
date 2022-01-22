@@ -14,8 +14,15 @@ switch(url.parse(req.url).pathname){
         console.log(queriesGram)
          res.end(JSON.stringify(gram(queriesGram.number, queriesGram.unit)))
         break
+
+    case '/money':
+        const queriesMoney = url.parse(req.url, true).query
+        res.end(JSON.stringify(convert(queriesMoney.dollars, queriesMoney.unit)))
+        break
+    
     default:
         res.end()
+
 }
 })
 app.listen(3000)
