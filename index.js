@@ -1,6 +1,15 @@
+const http = require('http')
+const url = require('url')
 const {  gram, temperature, convert, CookingConverter } = require('./ConversionsOps')
 
-console.log(gram(1000))
+const app = http.createServer((req, res)=>{
+switch(url.parse(req.url).pathname){
+    case '/temperature':
+        const queriesTemp = url.parse(req.url, true).query
+        res.end(JSON.stringify(temperature(queriesTemp.temp, queriesTemp.unit)))
+        break
+}
 
-console.log(temperature(110, "F"))
-console.log(temperature(34, "C"))
+})
+
+app.listen(3000)
