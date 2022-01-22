@@ -8,7 +8,6 @@ switch(url.parse(req.url).pathname){
         const queriesTemp = url.parse(req.url, true).query
         res.end(JSON.stringify(temperature(queriesTemp.temp, queriesTemp.unit)))
         break
-        
     case '/grams':
         const queriesGram = url.parse(req.url,true).query
         console.log(queriesGram)
@@ -18,4 +17,5 @@ switch(url.parse(req.url).pathname){
         res.end()
 }
 })
+
 app.listen(3000)
