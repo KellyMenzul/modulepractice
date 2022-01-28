@@ -20,3 +20,5 @@ const temperature = (a, unit)=>{
 }
 
 module.exports = temperature
+
+//http://localhost:3000/temperature?temp=110&unit=f

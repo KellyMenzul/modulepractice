@@ -1,3 +1,6 @@
+// const express = require('express')
+// const app = express()
+ 
 const http = require('http')
 const url = require('url')
 const {  gram, temperature, convert, CookingConverter } = require('./ConversionsOps')
@@ -18,6 +21,11 @@ switch(url.parse(req.url).pathname){
     case '/money':
         const queriesMoney = url.parse(req.url, true).query
         res.end(JSON.stringify(convert(queriesMoney.dollars, queriesMoney.unit)))
+        break
+
+    case '/cookingConverter':
+        const queriesCooking = url.parse(req.url, true).query
+        res.end(JSON.stringify(CookingConverter(queriesCooking.value, queriesCooking.unit)))
         break
     
     default:

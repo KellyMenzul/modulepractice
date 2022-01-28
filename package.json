@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/KellyMenzul/modulepractice/issues"
   },
-  "homepage": "https://github.com/KellyMenzul/modulepractice#readme"
+  "homepage": "https://github.com/KellyMenzul/modulepractice#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
