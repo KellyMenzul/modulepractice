@@ -1,10 +1,10 @@
 const CookingConverter = (value, unit) =>{
-    if(unit === "Grams"){
+    if(unit === "G"){
         const Ounces = value / 28.35
         return Ounces
     }
     
-    if(unit === "Ounces"){
+    if(unit === "Oz"){
         const Grams = value * 28.35
         return Grams
     }

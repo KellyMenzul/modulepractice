@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const myroutes = require('./Routes/temperatureRoutes')
+const cookingRoutes = require('./Routes/cookingRoutes')
  
 // const http = require('http')
 // const url = require('url')
@@ -34,6 +35,6 @@ const myroutes = require('./Routes/temperatureRoutes')
 
 // }
 // })
-
+app.use(cookingRoutes)
 app.use(myroutes)
 app.listen(3000)
