@@ -21,4 +21,4 @@ const convert= (a, unit)=>{
 
 module.exports = convert
 
-//http://localhost:3000/money?dollars=10&unit=CAD
+//http://localhost:3000/moneyconversion?amount=10&unit=CAD

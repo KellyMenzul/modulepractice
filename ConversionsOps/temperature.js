@@ -1,8 +1,8 @@
-const temperature = (a, unit)=>{
+const temperature = (temp, unit)=>{
     //Farenhiet to Celcius
     if(unit === "f" || unit === "F"){
         const tempData = {
-            temperature: ((a - 30) / 2),
+            temperature: ((temp - 30) / 2),
             unit: 'C'
         }
         return tempData
@@ -11,7 +11,7 @@ const temperature = (a, unit)=>{
     //Celcius to Farenhiet
     if(unit === "c" || unit === "C"){
         const tempData = {
-            temperature: ((a * 1.8000) +  32),
+            temperature: ((temp * 1.8000) +  32),
             unit: 'F'
 
         }
@@ -21,4 +21,4 @@ const temperature = (a, unit)=>{
 
 module.exports = temperature
 
-//http://localhost:3000/temperature?temp=110&unit=f
+//http://localhost:3000/temperatureconversion?temp=110&unit=f

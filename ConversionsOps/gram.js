@@ -17,4 +17,4 @@ const gram = (number, unit) => {
 
 module.exports = gram
 
-//http://localhost:3000/grams?number=100&unit=g
+//http://localhost:3000/gramconversion?number=100&unit=g
